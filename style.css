@@ -1,194 +1,255 @@
-/* css Zen Garden default style v1.02 */
+
+/******************************************************************************
+ * WATS1010: Introduction to Web Development
+ * CSS Zen Garden Assignment
+ * by Luke Ware
+ * Site Styles
+ *****************************************************************************/
+
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
 
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+html p, a, ul, li {
+	font-family:"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 
 
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
+/* Change the link color on hover */
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+		text-decoration: underline;
+    background-color: rgb(243, 255, 255);
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+}
 
 
-/* specific divs */
-.page-wrapper { 
-	background: url(zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
+.intro {
+border-top-style: dotted;
+border-width: 2px;
+}
+
+body {
+	background: url(lego-bob.png) no-repeat center top fixed, url(background-blur.jpg) no-repeat;
+
+	           -webkit-animation: fadein 4s; /* Safari and Chrome */
+            -moz-animation: fadein 4s; /* Firefox */
+            -ms-animation: fadein 4s; /* Internet Explorer */
+            -o-animation: fadein 4s; /* Opera */
+            animation: fadein 4s;
+}
+
+				@keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Firefox */
+        @-moz-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Safari and Chrome */
+        @-webkit-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+
+        /* Internet Explorer */
+        @-ms-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }​
+
+        /* Opera */
+        @-o-keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+}
+
+h1, h2 {
+  font-family: "Georgia", Times, serif;
+/* 	padding-top: 1em;
+	padding-left: 5em; */
+}
+
+h3 {
+	text-align: center;
+	text-shadow: 0px 1px 2px #555;
+	font-family: "Georgia", Times, serif;
+}
+
+p {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+header {
+	background: url(lego-bob) no-repeat;
+	background-position: center top;
+	background-attachment: fixed;
+	height: 420px;
+	line-height: 1em;
 	position: relative;
 	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header {
-	padding-top: 20px;
-	height: 87px;
+.intro h1 {
+	padding-top: 4em;
+	font-size: 240%;
+	text-shadow: 0px 2px 3px #555;
+	padding-left: 4em;
+}
+.intro h2 {
+	padding-left: 3em;
 }
 
 .summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+	background-color: rgba(243, 255, 255, 0.3);
+	float: right;
+	position: absolute;
+	top: 3em;
+	right: 100px;
+	width: 25%;
+	border-radius: 15px;
+	border-width: 1px;
+	border-style: dotted;
+}
+.summary p:last-child {
+  font-size: 14px;
+	text-decoration: overline;
+}
 
 .preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
-
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
-
-.sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
-
-	text-indent: 100%;
-	white-space: nowrap;
+	float: left;
+	width: 50%;
+	min-width: 400px;
+	min-height: 280px;
+	position: relative;
+	background-color: rgba(117, 216, 230, 0.8);
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
 	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+.explanation {
+	background-color: rgba(144, 238, 144, 0.8);
+	float: right;
+	width: 50%;
+	min-width: 400px;
+/* 	height: 280px; */
+	min-height: 280px;
+	position: relative;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: scroll;
+}
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
+.participation {
+	background-color: rgba(240, 128, 128, 0.8);
+	float: left;
+	width: 50%;
+	min-width: 400px;
+	min-height: 340px;
+	position: relative;
+	border-top-left-radius: 15px;
+	border-bottom-left-radius: 15px;
+	overflow: scroll;
+}
+
+.benefits {
+	background:url(lego-block-black.png) no-repeat center;
+	background-size: 110px 180px;
+	background-color: rgba(255,252,27, 0.8);
+	float: right;
+	width: 50%;
+	min-width: 400px;
+	min-height: 340px;
+	position: relative;
+	border-top-right-radius: 15px;
+	border-bottom-right-radius: 15px;
+	overflow: scroll;
+}
+.requirements {
+	background-color: rgba(255,160,122, 0.9);
+	width: 100%;
+	clear: both;
+/* 	height: 440px; */
+	min-height: 440px;
+	min-width:600px;
+	position: relative;
+	border-radius: 15px;
+	overflow: scroll;
+}
+.requirements p {
+	padding-left: 4em;
+	padding-right: 4em;
+}
+.requirements p:last-child {
+  font-size: 22px;
+  line-height: 1.25em;
+  margin-top: 40px;
+  max-width: none;
+  padding: 0 22.5% 20px;
+  text-align: center;
+  width: 55%;
+}
+footer {
+	background-color: rgba(243, 255, 255, 0.9);
+	clear: both;
+	text-align: center;
+	padding: 10px;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-width: 1px;
+	border-style: dotted;
+}
 
 
 .sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
 	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+}
 
-
-.extra1 {
-	background: transparent url(cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+.design-selection {
+	background-color: rgba(176, 196, 222, 0.8);
+	float: left;
+	width: 50%;
+	min-height: 277px;
+	overflow: scroll;
+	border-bottom-left-radius: 15px;
+}
+.design-selection h3 {
+	text-align: left;
+	padding-left: 2em;
+}
+.design-archives {
+	background-color: rgba(176, 196, 222, 0.8);
+	float: right;
+	width: 50%;
+	min-width: 50%;
+	overflow: scroll;
+}
+.design-archives h3 {
+	text-align: left;
+	padding-left: 2em;
+}
+.zen-resources {
+	background-color: rgba(176, 196, 222, 0.8);
+	float: right;
+	width: 50%;
+	min-width: 50%;
+	overflow: scroll;
+	border-bottom-right-radius: 15px;
+}
+.zen-resources h3 {
+	text-align: left;
+	padding-left: 2em;
+}
